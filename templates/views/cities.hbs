@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Cities</title <link rel="icon" href="/img/weather.png">
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+
+        {{#each cities}}
+        <div class="row" id={{id}}>
+            <div class="column">
+                <img src="/img/{{country}}.png"></img>
+            </div>
+            <div class="column" id="forecastData">
+                <p>{{capital}} ({{country}})</p>
+                <p>Latitude: {{latitude}} Longitude: {{longitude}}</p>
+                <p>{{forecast}}</p>
+            </div>
+        </div>
+        {{/each}}
+    </div {{>footer}} </body>
+
+</html>
